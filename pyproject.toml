@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "rpd"
+version = "0.1.0"
+description = "Training-free reliable parallel decoding selector for masked diffusion language models."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = ["jax"]
+
+[project.optional-dependencies]
+tests = ["pytest"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
